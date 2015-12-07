@@ -1,6 +1,5 @@
 (function (w) {
     var
-
     //hash的缓存
         hash = '~',
 
@@ -38,7 +37,7 @@
 
             hash = laHash;
             h1 = laHash.match(/\/.*\//);
-            h2 = laHash.replace(/^#!?.*\//, '').split(';');
+            h2 = laHash.replace(/^#!?.*\//, '').split(/;|&/);
 
 
 
@@ -56,11 +55,13 @@
             return this;
         },
 
+
+        //路由跳转
         go: function (key) {
             location.hash = key;
         },
 
-        //默认中由
+        //默认路由
         def: function (cb) {
             def = cb;
             return this;
