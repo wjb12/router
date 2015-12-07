@@ -38,7 +38,9 @@
 
             hash = laHash;
             h1 = laHash.match(/\/.*\//);
-            h2 = laHash.replace(/^#!.*\//, '').split(';');
+            h2 = laHash.replace(/^#!?.*\//, '').split(';');
+
+
 
             func = typeof lib[h1] === 'function' ? lib[h1] : def;
 
