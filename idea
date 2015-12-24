@@ -1,0 +1,38 @@
+// v-add
+spa.add('/add/', {
+  template : '/static/html/director/add.html',
+  request: '/member/add',
+  type : 'post'
+});
+
+// v-del
+spa.del('/del/', {
+  request: '/member/del',
+  type : 'post'
+});
+
+// v-edit 编辑页面
+spa.view('/edit/', {
+  template : '/static/html/director/edit.html',
+  url : '/member/edit',
+  type : 'get'
+});
+
+spa.edit('/edit/', {
+  url : '/member/edit',
+  type : 'post'
+});
+
+// v-view  查看会员信息页面
+spa.view('/view/', {
+  template : '/static/html/director/view.html',
+  request: '/member/view',
+  type : 'get' //jsonp|get|post
+});
+
+// v-view  查看会员列表页面
+spa.view('/list/', {
+  template : '/static/html/director/list.html',
+  request: '/member/list',
+  type : 'get' //jsonp|get|post
+});
