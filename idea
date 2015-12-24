@@ -12,16 +12,18 @@ spa.del('/del/', {
 });
 
 // v-edit 编辑页面
-spa.view('/edit/', {
+spa.eidt('/edit/', {
   template : '/static/html/director/edit.html',
-  url : '/member/edit',
-  type : 'get'
+  request : {
+    url : '/member/edit',
+    type : 'get'
+  },
+  submit : {
+    url : '/member/edit',
+    type : 'post'
+  }  
 });
 
-spa.edit('/edit/', {
-  url : '/member/edit',
-  type : 'post'
-});
 
 // v-view  查看会员信息页面
 spa.view('/view/', {
